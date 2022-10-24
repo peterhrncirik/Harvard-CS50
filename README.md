@@ -25,7 +25,6 @@ Introduction to the intellectual enterprises of computer science and the art of 
 
 ## Week 4 - Memory
 
-   - Volume - modifies the volume of an audio file
    - Filter - opens an image file, apples blur/grayscale/reflection/sepia filters, and saves to output file
    - Recover - searches 512-byte blocks for jpg signatures and reads them to new files
 

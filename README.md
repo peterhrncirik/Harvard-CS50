@@ -14,7 +14,7 @@ Introduction to the intellectual enterprises of computer science and the art of 
 
 ## Week 2 - Arrays
 
-   - Scrabble - accepts user's strings and calculates scrabble scores for each word
+   - Substitution - program that implements a substitution cipher
    - Readability - calculates a reading level for a string of text based on number of letters, words and sentences
    - Caesar - shifts each letter of a string by a user specified amount, maintaining capitalization
 

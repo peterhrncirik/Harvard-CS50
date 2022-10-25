@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell stock
+{% endblock %}
+
+{% block main %}
+<div>
+    <form action="/sell" method="POST">
+        <div class="form-group">
+            <select name="symbol" class="form-control">
+                {% for symbol in user_data %}
+                <option value={{ symbol['symbol'] }}>{{ symbol['symbol'] }}</option>
+                {% endfor %}
+            </select>
+            <input class="form-control" type="number" name="shares" placeholder="Number of shares" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

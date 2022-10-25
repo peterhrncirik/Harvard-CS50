@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+<div class="mb-5">
+    <h4>Welcome back, {{ user_info[0]['username'] }}!</h4>
+    <p>Your current cash balance: <strong>{{ cash }}</strong></p>
+    <p>Your current total balance: <strong>{{ tb }}</strong></p>
+</div>
+<div>
+    {% if user_stocks %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Stock owned</th>
+                <th scope="col">Number of Shares</th>
+                <th scope="col">Current price</th>
+                <th scope="col">Total value</th>
+            </tr>
+        </thead>
+        <tbody>
+               {% for stock in user_stocks %}
+             <tr>
+              <th scope="row">{{ stock['symbol'] }}</th>
+              <td>{{ stock['shares'] }}</td>
+              <td>{{ stock['current_price'] }}</td>
+              <td>{{ stock['total_value_usd'] }}</td>
+            </tr>
+                {% endfor %}
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td><strong>Total stocks value</strong></td>
+                  <td><strong>{{ sv }}</strong></td>
+              </tr>
+        </tbody>
+    </table>
+        {% else %}
+            <h3>Looks like you haven't bought any stocks yet!</h3>
+        {% endif %}
+</div>
+{% endblock %}

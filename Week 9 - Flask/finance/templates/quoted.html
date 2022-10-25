@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Look up
+{% endblock %}
+
+{% block main %}
+    <h1>{{ stock['name'] }} {{ stock['symbol'] }}</h1>
+    <p>Current price: {{ price }}</p>
+{% endblock %}

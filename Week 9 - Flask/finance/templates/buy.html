@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy stock
+{% endblock %}
+
+{% block main %}
+<form action="/buy" method="post">
+    <h4>{{ user }}</h4>
+    <div class="form-group">
+        <input type="text" class="form-control" name="symbol" Placeholder="Stock (e.g. TSLA)" required>
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" name="shares" Placeholder="Quantity" required>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Find stock & buy shares</button>
+    </div>
+</form>
+{% endblock %}
